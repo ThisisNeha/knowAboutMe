@@ -1,23 +1,25 @@
 
 var readlineSync = require('readline-sync');
+const chalk = require('chalk');
+
 
 var score = 0;
 
 var userName = readlineSync.question('Enter your name here!');
 
 console.log("");
-console.log("Welcome " + userName.toUpperCase() + " ! Lets start the quiz.");
+console.log("Welcome " + chalk.yellowBright(userName.toUpperCase() )+ " ! Lets start the quiz.");
 console.log("");
 
 function play(question, answer){
 var userAns = readlineSync.question(question);
 
 if (userAns=== answer){
-  console.log("You are right!");
+  console.log(chalk.greenBright("You are right!"));
   score++;
   
 }else{
-  console.log("oops! wrong answer!")
+  console.log(chalk.redBright("oops! wrong answer!"));
 }
 console.log("your score is : ", score);
 console.log("--------");
