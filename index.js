@@ -1,4 +1,4 @@
-//  console.log("neha");
+
 var readlineSync = require('readline-sync');
 
 var score = 0;
@@ -12,7 +12,7 @@ console.log("");
 function play(question, answer){
 var userAns = readlineSync.question(question);
 
-if (userAns===answer){
+if (userAns=== answer){
   console.log("You are right!");
   score++;
   
@@ -29,7 +29,7 @@ var questions=[{
   question:'1. Where do I live (Hint: Heart of India) ?',
   answer:'Delhi'
 },{
-  question : '2. What I am studing currently?', 
+  question : '2. What am I studing currently?', 
   answer:'web development'
 },{
   question: '3. Do i have a CS background?',
@@ -40,7 +40,6 @@ var questions=[{
 },{
   question: '5. Which is my favourite drink?',
   answer:'Coffee'
-
 }
 ]
 for (var i =0; i<questions.length; i++){
