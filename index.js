@@ -14,7 +14,7 @@ console.log("");
 function play(question, answer){
 var userAns = readlineSync.question(question);
 
-if (userAns=== answer){
+if (userAns.toLowerCase()=== answer){
   console.log(chalk.greenBright("Yay! you are right! 🤩"));
   score++;
   
@@ -29,19 +29,19 @@ console.log("--------");
 
 var questions=[{
   question:'1. Where do I live (Hint: Heart of India) ?',
-  answer:'Delhi'
+  answer:'delhi'
 },{
   question : '2. What am I studing currently?', 
   answer:'web development'
 },{
   question: '3. Do i have a CS background?',
-  answer:'No'
+  answer:'no'
 },{
   question:'4. Name the cuisine I absolutely love ?',
-  answer:'Chinese'
+  answer:'chinese'
 },{
   question: '5. Which is my favourite drink?',
-  answer:'Coffee'
+  answer:'coffee'
 }
 ]
 for (var i =0; i<questions.length; i++){
